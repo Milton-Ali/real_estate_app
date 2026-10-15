@@ -8,4 +8,6 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.lightBackground,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryNavy),
   );
+
+  static ThemeData? get darkTheme => null;
 }
