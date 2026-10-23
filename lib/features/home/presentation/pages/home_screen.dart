@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:real_estate_app/core/responsive/app_breakpoints.dart';
 import 'package:real_estate_app/features/home/presentation/widgets/featured_properties_section.dart';
 import 'package:real_estate_app/features/home/presentation/widgets/home_header.dart';
-import 'package:real_estate_app/features/home/presentation/widgets/home_search_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -34,24 +33,20 @@ class HomeScreen extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [HomeHeader(), HomeSearchBar(), FeaturedPropertiesSection()],
+        children: [HomeHeader(), FeaturedPropertiesSection()],
       ),
     );
   }
 
   Widget _buildTabletLayout() {
     return SingleChildScrollView(
-      child: Column(
-        children: [HomeHeader(), HomeSearchBar(), FeaturedPropertiesSection()],
-      ),
+      child: Column(children: [HomeHeader(), FeaturedPropertiesSection()]),
     );
   }
 
   Widget _buildDesktopLayout() {
     return SingleChildScrollView(
-      child: Column(
-        children: [HomeHeader(), HomeSearchBar(), FeaturedPropertiesSection()],
-      ),
+      child: Column(children: [HomeHeader(), FeaturedPropertiesSection()]),
     );
   }
 }
